@@ -1,0 +1,19 @@
+.nav ul {
+  display: none;
+}
+
+.nav li {
+  margin: 40px;
+}
+@media (min-width: 640px) {
+  .nav ul {
+    display: inline;
+  }
+
+  .nav {
+    text-align: center;
+  }
+
+  .nav li {
+    display:inline;
+  }
