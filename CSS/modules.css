@@ -10,7 +10,7 @@
 .resume p {
   width:80%;
   border-style: solid;
-  height: 150px;
+  height: 90px;
   margin: 0 auto;
 }
 
@@ -34,14 +34,6 @@
     display:inline-block;
     /*width:100px;*/
   }
-
-  /*.nav ul {
-    display: inline;
-  }
-
-  .nav a {
-    display: inline;
-  }*/
 
   .projects {
     float: right;
