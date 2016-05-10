@@ -23,4 +23,4 @@ var allMyProjects = [
     projectDescription: 'placeholder',
     projectSourceCode: 'https://github.com/tanyaweaver/final-project'
   }
-]
+];
