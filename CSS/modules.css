@@ -31,8 +31,17 @@
   }
 
   .nav li {
-    display:inline;
+    display:inline-block;
+    /*width:100px;*/
   }
+
+  /*.nav ul {
+    display: inline;
+  }
+
+  .nav a {
+    display: inline;
+  }*/
 
   .projects {
     float: right;
