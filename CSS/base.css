@@ -1,7 +1,10 @@
 body {
   text-align: center;
+  width: 70%;
+  margin: 0 auto;
 }
 
 ul {
+  padding: 0px;
   list-style-type: none;
 }
