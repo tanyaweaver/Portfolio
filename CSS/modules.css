@@ -25,6 +25,15 @@
   text-align: center;
 }
 
+#projects section {
+  margin: 20px 0px 20px 0px;
+}
+
+.project-icons {
+  width: 100px;
+  margin: 0 auto;
+}
+
 @media (min-width: 640px) {
   .nav {
     text-align: center;
@@ -35,7 +44,7 @@
     /*width:100px;*/
   }
 
-  .projects {
+  #projects {
     float: right;
     width: 35%
   }

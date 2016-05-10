@@ -5,7 +5,6 @@ function Project (opts){
   this.publishedOn = opts.publishedOn;
   this.projectGhPages = opts.projectGhPages;
   this.projectIcon = opts.projectIcon;
-  this.projectDescription = opts.projectDescription;
   this.projectSourceCode = opts.projectSourceCode;
 }
 
@@ -13,12 +12,13 @@ function Project (opts){
 Project.prototype.renderToHtml = function() {
   var $newProjectHtml = $('section.template').clone();
   $newProjectHtml.find('h1').html(this.title);
-  $newProjectHtml.find('time').html('about' + parseInt((new Date() - new Date (this.publishedOn))/60/60/24/1000) + 'days ago');
-  $newProjectHtml.find('main a[href]').html(this.projectGhPages);
-  $newProjectHtml.find('img[src]').html(this.projecticon);
+  $newProjectHtml.find('time').html('about ' + parseInt((new Date() - new Date (this.publishedOn))/60/60/24/1000) + ' days ago');
+  $newProjectHtml.find('.gh-pages').attr('href', this.projectGhPages);
+  $newProjectHtml.find('img').attr('src', this.projectIcon);
   $newProjectHtml.find('p').html(this.projectDescription);
-  $newProjectHtml.find('footer a[href]').html(this.projectSourceCode);
+  $newProjectHtml.find('.source-code').attr('href', this.projectSourceCode);
   $newProjectHtml.removeClass('template');
+  return $newProjectHtml;
 };
 
 //sort projects by date published, newes first
@@ -32,7 +32,7 @@ allMyProjects.forEach (function(project) {
   projects.push(new Project (project));
 });
 
-//appen each Project from the projects[] to the DOM
+//append each Project from the projects[] to the DOM
 projects.forEach (function(p) {
   $('#projects').append(p.renderToHtml());
 });
