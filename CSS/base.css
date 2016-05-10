@@ -8,3 +8,12 @@ ul {
   padding: 0px;
   list-style-type: none;
 }
+
+a:hover {
+  color: #880E4F;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}

@@ -10,7 +10,7 @@
 .resume p {
   width:80%;
   border-style: solid;
-  height: 150px;
+  height: 90px;
   margin: 0 auto;
 }
 
@@ -31,7 +31,8 @@
   }
 
   .nav li {
-    display:inline;
+    display:inline-block;
+    /*width:100px;*/
   }
 
   .projects {
