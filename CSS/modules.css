@@ -1,0 +1,50 @@
+.social-media li{
+  display: inline;
+}
+
+.nav li {
+  margin: 20px;
+  display:block;
+}
+
+.resume p {
+  width:80%;
+  border-style: solid;
+  height: 150px;
+  margin: 0 auto;
+}
+
+.project-placeholder {
+  width: 100px;
+  height:100px;
+  border-style: solid;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .nav {
+    text-align: center;
+  }
+
+  .nav li {
+    display:inline;
+  }
+
+  .projects {
+    float: right;
+    width: 35%
+  }
+
+  .resume {
+    float: left;
+    width: 65%;
+  }
+
+  .social-media li{
+    margin: 20px;
+  }
+}
