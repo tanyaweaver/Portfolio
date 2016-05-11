@@ -10,14 +10,14 @@ var allMyProjects = [
     title: 'Bus Mall',
     publishedOn: '2016-04-28',
     projectGhPages: 'https://tanyaweaver.github.io/bus-mall/',
-    projectIcon: 'assets/cookieShop.png',
+    projectIcon: 'assets/busMall.png',
     projectSourceCode: 'https://github.com/tanyaweaver/bus-mall'
   },
   {
     title: 'Game Rock, Paper, Scissors',
     publishedOn:'2016-05-05',
     projectGhPages: 'https://tanyaweaver.github.io/final-project',
-    projectIcon: 'assets/cookieShop.png',
+    projectIcon: 'assets/RPS.png',
     projectSourceCode: 'https://github.com/tanyaweaver/final-project'
   }
 ];

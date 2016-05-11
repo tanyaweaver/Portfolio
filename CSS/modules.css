@@ -1,23 +1,28 @@
+.template {
+  display: none;
+}
+
+time {
+  margin: 10px;
+}
+
 .social-media li{
-  display: inline;
+  display: inline-block;
 }
 
 .nav li {
   margin: 20px;
-  display:block;
+  display: block;
 }
 
+.resume {
+  width: 80%;
+  margin 0 auto;
+}
 .resume p {
   width:80%;
   border-style: solid;
   height: 90px;
-  margin: 0 auto;
-}
-
-.project-placeholder {
-  width: 100px;
-  height:100px;
-  border-style: solid;
   margin: 0 auto;
 }
 
@@ -29,8 +34,20 @@
   margin: 20px 0px 20px 0px;
 }
 
+.project-header {
+  margin: 10px;
+}
+
+.project-body {
+  width: inherit;
+}
+
+.gh-pages {
+  width:inherit;
+}
+
 .project-icons {
-  width: 100px;
+  width: 100%;
   margin: 0 auto;
 }
 
