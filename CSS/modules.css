@@ -2,35 +2,13 @@
   display: none;
 }
 
-time {
-  margin: 10px;
-}
-
-.social-media li{
-  display: inline-block;
-}
-
-.nav li {
-  margin: 20px;
-  display: block;
-}
-
-.resume {
-  width: 80%;
-  margin 0 auto;
-}
-.resume p {
-  width:80%;
-  border-style: solid;
+.resume-container p {
+  width: 90%;
   height: 90px;
   margin: 0 auto;
 }
 
-.title {
-  text-align: center;
-}
-
-#projects section {
+.projects-container section {
   margin: 20px 0px 20px 0px;
 }
 
@@ -38,40 +16,11 @@ time {
   margin: 10px;
 }
 
-.project-body {
-  width: inherit;
-}
-
-.gh-pages {
-  width:inherit;
+.project-header time {
+  margin: 10px;
 }
 
 .project-icons {
   width: 100%;
   margin: 0 auto;
-}
-
-@media (min-width: 640px) {
-  .nav {
-    text-align: center;
-  }
-
-  .nav li {
-    display:inline-block;
-    /*width:100px;*/
-  }
-
-  #projects {
-    float: right;
-    width: 35%
-  }
-
-  .resume {
-    float: left;
-    width: 65%;
-  }
-
-  .social-media li{
-    margin: 20px;
-  }
 }

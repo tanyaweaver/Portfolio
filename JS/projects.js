@@ -9,7 +9,7 @@ function Project (opts){
 }
 
 //render projects to the html page
-Project.prototype.renderToHtml = function() {
+Project.prototype.toHtml = function() {
   var $newProjectHtml = $('section.template').clone();
   $newProjectHtml.find('h1').html(this.title);
   $newProjectHtml.find('time').html('about ' + parseInt((new Date() - new Date (this.publishedOn))/60/60/24/1000) + ' days ago');
@@ -34,5 +34,5 @@ allMyProjects.forEach (function(project) {
 
 //append each Project from the projects[] to the DOM
 projects.forEach (function(p) {
-  $('#projects').append(p.renderToHtml());
+  $('#projects').append(p.toHtml());
 });
