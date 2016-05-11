@@ -1,51 +1,26 @@
-.social-media li{
-  display: inline;
+.template {
+  display: none;
 }
 
-.nav li {
-  margin: 20px;
-  display:block;
-}
-
-.resume p {
-  width:80%;
-  border-style: solid;
+.resume-container p {
+  width: 90%;
   height: 90px;
   margin: 0 auto;
 }
 
-.project-placeholder {
-  width: 100px;
-  height:100px;
-  border-style: solid;
+.projects-container section {
+  margin: 20px 0px 20px 0px;
+}
+
+.project-header {
+  margin: 10px;
+}
+
+.project-header time {
+  margin: 10px;
+}
+
+.project-icons {
+  width: 100%;
   margin: 0 auto;
-}
-
-.title {
-  text-align: center;
-}
-
-@media (min-width: 640px) {
-  .nav {
-    text-align: center;
-  }
-
-  .nav li {
-    display:inline-block;
-    /*width:100px;*/
-  }
-
-  .projects {
-    float: right;
-    width: 35%
-  }
-
-  .resume {
-    float: left;
-    width: 65%;
-  }
-
-  .social-media li{
-    margin: 20px;
-  }
 }

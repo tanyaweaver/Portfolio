@@ -1,0 +1,44 @@
+/******************HEADER******************/
+.title {
+  text-align: center;
+}
+
+.social-media li{
+  display: inline-block;
+}
+
+.nav li {
+  margin: 20px;
+  display: block;
+}
+/******************MAIN SECTION******************/
+.resume-container {
+  width: 100%;
+  align-content: center;
+}
+
+.projects-container {
+  width: 100%;
+  align-content: center;
+}
+
+@media (min-width: 640px) {
+/******************HEADER******************/
+  .nav li {
+    display:inline-block;
+  }
+
+  .social-media li{
+    margin: 20px;
+  }
+/******************MAIN SECTION******************/
+  .projects-container {
+    float: right;
+    width: 35%
+  }
+
+  .resume-container {
+    float: left;
+    width: 65%;
+  }
+}
