@@ -11,6 +11,18 @@ projectView.populateFilters = function() {
   });
 };
 
+projectView.handleCategoryFilter = function() {
+  $('#category-filter').on('change', function() {
+    console.log($(this).val());
+    if($(this).val() !== '--Search for a project by category--') {
+      $('.projects-display').hide();
+      $('.projects-display[data-category="' + $(this).val() + '"]').fadeIn();
+    }else{
+      $('.projects-display').show();
+    };
+  });
+};
+
 projectView.handleMainNav = function() {
   $('.nav').on('click', '.tab', function() {
     var $choice = $(this).data('content');
@@ -27,4 +39,5 @@ projectView.handleMainNav = function() {
 $(document).ready(function() {
   projectView.handleMainNav();
   projectView.populateFilters();
+  projectView.handleCategoryFilter();
 });
