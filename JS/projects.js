@@ -10,16 +10,21 @@ function Project (opts){
 
 //render projects to the html page
 Project.prototype.toHtml = function() {
-  var $newProjectHtml = $('section.template').clone();
-  $newProjectHtml.find('h3').html(this.title);
-  $newProjectHtml.find('time').html('about ' + parseInt((new Date() - new Date (this.publishedOn))/60/60/24/1000) + ' days ago');
-  $newProjectHtml.find('.gh-pages').attr('href', this.projectGhPages);
-  $newProjectHtml.find('img').attr('src', this.projectIcon);
-  $newProjectHtml.find('p').html(this.projectDescription);
-  $newProjectHtml.find('.source-code').attr('href', this.projectSourceCode);
-  $newProjectHtml.removeClass('template');
-  $newProjectHtml.addClass('projects-display');
-  return $newProjectHtml;
+  // var $newProjectHtml = $('section.template').clone();
+  // $newProjectHtml.find('h3').html(this.title);
+  // $newProjectHtml.find('.gh-pages').attr('href', this.projectGhPages);
+  // $newProjectHtml.find('img').attr('src', this.projectIcon);
+  // $newProjectHtml.find('p').html(this.projectDescription);
+  // $newProjectHtml.find('.source-code').attr('href', this.projectSourceCode);
+  // $newProjectHtml.removeClass('template');
+  // $newProjectHtml.find('time').html('about ' + parseInt((new Date() - new Date (this.publishedOn))/60/60/24/1000) + ' days ago');
+  // $newProjectHtml.addClass('projects-display');
+  // return $newProjectHtml;
+  this.publishedDaysAgo = 'about ' + parseInt((new Date() - new Date (this.publishedOn))/60/60/24/1000) + ' days ago';
+  var $source = $('#render-projects').html();
+  var template = Handlebars.compile($source);
+  // this.classList.add('projects-display');
+  return template(this);
 };
 
 //sort projects by date published, newes first

@@ -8,6 +8,25 @@
     <link rel="stylesheet" href="CSS/base.css">
     <link rel="stylesheet" href="CSS/layout.css">
     <link rel="stylesheet" href="CSS/modules.css">
+    <script id="render-projects" type="text/x-handlebars-template">
+      <section class="projects-display" class="project-item">
+        <header class="project-header">
+          <h3>{{title}}</h3>
+          <time>{{publishedDaysAgo}}</time>
+        </header>
+
+        <main class="project-body">
+          <a class="gh-pages" href={{projectGhPages}}>
+            <div class='project-icons'><img src={{projectIcon}}></div>
+            <p></p>
+          </a>
+        </main>
+
+        <footer>
+          <a class="source-code" href={{projectSourceCode}}>Source Code on GitHub.com</a>
+        </footer>
+      </section>
+    </script>
 </head>
 <body>
   <header>
@@ -59,7 +78,7 @@
         <h2>My Projects</h2>
         <div class="projects-container">
 
-        <section class="template">
+        <!-- <section class="template">
           <header class="project-header">
             <h3>Title</h3>
             <time>Published Time</time>
@@ -76,10 +95,11 @@
             <a class="source-code" href="">Source Code on GitHub.com</a>
           </footer>
         </div>
-        </section>
+        </section> -->
+        </div>
       </section>
 
-      </div>
+      <!-- </div> -->
     </main>
 
     <footer>
@@ -93,6 +113,7 @@
       <p>&copy 2016 Tatiana Weaver
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
     <script src="JS/projectItems.js"></script>
     <script src="JS/projects.js"></script>
     <script src="JS/projectView.js"></script>
