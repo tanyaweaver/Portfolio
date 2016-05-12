@@ -5,11 +5,13 @@
 
 .social-media li{
   display: inline-block;
+  padding: 10px;
 }
 
 .nav li {
-  margin: 20px;
+  padding: 10px;
   display: block;
+  font-size: 20px;
 }
 /******************MAIN SECTION******************/
 .resume-container {
@@ -22,9 +24,16 @@
   align-content: center;
 }
 
+.projects-display {
+  display: block;
+  width:90%;
+  margin: 0 auto;
+}
+
 @media (min-width: 640px) {
 /******************HEADER******************/
   .nav li {
+    margin: 10px;
     display:inline-block;
   }
 
@@ -32,13 +41,14 @@
     margin: 20px;
   }
 /******************MAIN SECTION******************/
-  .projects-container {
-    float: right;
-    width: 35%
+  .projects-display {
+    display: inline-block;
+    width:30%;
+    margin: 10px;
   }
 
-  .resume-container {
+  /*.resume-container {
     float: left;
     width: 65%;
   }
-}
+}*/

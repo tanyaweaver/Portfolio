@@ -14,7 +14,7 @@ var allMyProjects = [
     projectSourceCode: 'https://github.com/tanyaweaver/bus-mall'
   },
   {
-    title: 'Game Rock, Paper, Scissors',
+    title: 'Rock, Paper, Scissors',
     publishedOn:'2016-05-05',
     projectGhPages: 'https://tanyaweaver.github.io/final-project',
     projectIcon: 'assets/RPS.png',

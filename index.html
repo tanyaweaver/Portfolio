@@ -2,42 +2,30 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link href='https://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'> -->
     <!-- <link rel="stylesheet" href="CSS/icons.css"> -->
+    <link href='https://fonts.googleapis.com/css?family=PT+Serif|Montserrat' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="CSS/base.css">
     <link rel="stylesheet" href="CSS/layout.css">
     <link rel="stylesheet" href="CSS/modules.css">
 </head>
 <body>
   <header>
-
-      <div class="title">
+    <section class="title">
         <h1>Tatiana Weaver</h1>
         <h2>Software Developer</h2>
-      </div>
-
-    <div class="social-media">
+    </section>
+    <section class="nav">
       <ul>
-        <li><a href="https://github.com/tanyaweaver">Github</a></li>
-        <li>Email</li>
-        <li>Phone</li>
+        <li><a class="tab" data-content="projects">Home</a></li>
+        <li><a class="tab" data-content="resume">About</a></li>
+        <li><a class="tab" data-content="contact-me">Contact Me</a></li>
       </ul>
-    </div>
-    <hr/>
-
-      <div class="nav">
-
-        <ul>
-          <li><a href="#objective">Objective</a></li>
-          <li><a href="#work-history">Work History</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#skills">Skills</a></li>
-        </ul>
-      </div>
-    </header>
+    </section>
+  </header>
 
     <main>
-
-      <section class="resume-container">
+      <section class="tab-content" id="resume" class="resume-container">
 
         <div id="objective">
           <h2>Objective</h2>
@@ -61,12 +49,19 @@
 
       </section>
 
-      <section id="projects" class="projects-container">
-        <h2>My Projects</h2>
+      <section id="contact-me" class="tab-content" class="contact-me-container">
+        <h2>Contact Me</h2>
+        <h3>Phone</h3>
+        <h3>Email</h3>
+      </section>
 
-        <section class="template" >
+      <section id="projects" class="tab-content">
+        <h2>My Projects</h2>
+        <div class="projects-container">
+
+        <section class="template">
           <header class="project-header">
-            <h1>Title</h1>
+            <h3>Title</h3>
             <time>Published Time</time>
           </header>
 
@@ -80,7 +75,7 @@
           <footer>
             <a class="source-code" href="">Source Code on GitHub.com</a>
           </footer>
-
+        </div>
         </section>
       </section>
 
@@ -88,10 +83,19 @@
     </main>
 
     <footer>
+      <div class="social-media">
+        <ul>
+          <li><a href="https://github.com/tanyaweaver">Github</a></li>
+          <li>LinkedIn</li>
+          <li>Facebook</li>
+        </ul>
+      </div>
+      <p>&copy 2016 Tatiana Weaver
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="JS/projectItems.js"></script>
     <script src="JS/projects.js"></script>
+    <script src="JS/projectView.js"></script>
   </body>
 
 </html>
