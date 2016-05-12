@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="CSS/layout.css">
     <link rel="stylesheet" href="CSS/modules.css">
     <script id="render-projects" type="text/x-handlebars-template">
-      <section class="projects-display" class="project-item">
+      <section class="projects-display"  class="project-item" data-category={{category}}>
         <header class="project-header">
           <h3>{{title}}</h3>
+          <!-- <h4>Category: {{category}}</h4> -->
           <time>{{publishedDaysAgo}}</time>
         </header>
 
@@ -44,6 +45,7 @@
   </header>
 
     <main>
+
       <section class="tab-content" id="resume" class="resume-container">
 
         <div id="objective">
@@ -76,6 +78,13 @@
 
       <section id="projects" class="tab-content">
         <h2>My Projects</h2>
+
+        <div id="filter">
+          <select id="category-filter">
+            <option>--Search for a project by category--</option>
+          </select>
+        </div>
+
         <div class="projects-container">
 
         <!-- <section class="template">

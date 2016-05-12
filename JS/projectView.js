@@ -1,5 +1,16 @@
 var projectView = {};
 
+projectView.populateFilters = function() {
+  $('.projects-display').each(function() {
+    var val = $(this).attr('data-category');
+    var optionTag = '<option value="' + val + '">' + val + '</option>';
+    console.log($('#category-filter').text());
+    if($('#category-filter').text().indexOf(val) == -1) {
+      $('#category-filter').append(optionTag);
+    }
+  });
+};
+
 projectView.handleMainNav = function() {
   $('.nav').on('click', '.tab', function() {
     var $choice = $(this).data('content');
@@ -15,4 +26,5 @@ projectView.handleMainNav = function() {
 };
 $(document).ready(function() {
   projectView.handleMainNav();
+  projectView.populateFilters();
 });

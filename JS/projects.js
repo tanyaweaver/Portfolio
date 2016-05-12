@@ -2,6 +2,7 @@ var projects = [];
 
 function Project (opts){
   this.title = opts.title;
+  this.category = opts.category;
   this.publishedOn = opts.publishedOn;
   this.projectGhPages = opts.projectGhPages;
   this.projectIcon = opts.projectIcon;
