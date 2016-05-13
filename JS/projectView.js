@@ -20,6 +20,8 @@ projectView.handleCategoryFilter = function() {
     }else{
       $('.projects-display').show();
     };
+    // $(this).val('--Search for a project by category--');
+    // console.log($(this).val());
   });
 };
 
@@ -31,13 +33,17 @@ projectView.handleMainNav = function() {
       if($(this).attr('id') === $choice) {
         $(this).fadeIn();
       }
+      if($(this).attr('id') === 'projects'){
+        $('.projects-display').show();
+        $('#category-filter').val('--Search for a project by category--');
+      }
     });
   });
   //setting click on the HOME tab to set up the page
   $('.nav .tab:first').click();
 };
 $(document).ready(function() {
-  projectView.handleMainNav();
   projectView.populateFilters();
   projectView.handleCategoryFilter();
+  projectView.handleMainNav();
 });
