@@ -8,6 +8,26 @@
     <link rel="stylesheet" href="CSS/base.css">
     <link rel="stylesheet" href="CSS/layout.css">
     <link rel="stylesheet" href="CSS/modules.css">
+    <script id="render-projects" type="text/x-handlebars-template">
+      <section class="projects-display"  class="project-item" data-category={{category}}>
+        <header class="project-header">
+          <h4>{{title}}</h4>
+          <!-- <h4>Category: {{category}}</h4> -->
+          <time>{{publishedDaysAgo}}</time>
+        </header>
+
+        <main class="project-body">
+          <a class="gh-pages" href={{projectGhPages}}>
+            <div class='project-icons'><img src={{projectIcon}}></div>
+            <p></p>
+          </a>
+        </main>
+
+        <footer>
+          <a class="source-code" href={{projectSourceCode}}>Source Code on GitHub.com</a>
+        </footer>
+      </section>
+    </script>
 </head>
 <body>
   <header>
@@ -25,6 +45,7 @@
   </header>
 
     <main>
+
       <section class="tab-content" id="resume" class="resume-container">
 
         <div id="objective">
@@ -56,10 +77,17 @@
       </section>
 
       <section id="projects" class="tab-content">
-        <h2>My Projects</h2>
+        <h3>My Projects</h3>
+
+        <div id="filter">
+          <select id="category-filter">
+            <option val="">--Search for a project by category--</option>
+          </select>
+        </div>
+
         <div class="projects-container">
 
-        <section class="template">
+        <!-- <section class="template">
           <header class="project-header">
             <h3>Title</h3>
             <time>Published Time</time>
@@ -76,10 +104,11 @@
             <a class="source-code" href="">Source Code on GitHub.com</a>
           </footer>
         </div>
-        </section>
+        </section> -->
+        </div>
       </section>
 
-      </div>
+      <!-- </div> -->
     </main>
 
     <footer>
@@ -93,6 +122,7 @@
       <p>&copy 2016 Tatiana Weaver
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
     <script src="JS/projectItems.js"></script>
     <script src="JS/projects.js"></script>
     <script src="JS/projectView.js"></script>

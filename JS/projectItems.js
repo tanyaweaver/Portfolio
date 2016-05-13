@@ -1,6 +1,7 @@
 var allMyProjects = [
   {
     title: 'Cookie Shop',
+    category: 'e-commerce',
     publishedOn: '2016-04-21',
     projectGhPages: 'https://tanyaweaver.github.io/Cookie-stand/',
     projectIcon: 'assets/cookieShop.png',
@@ -8,6 +9,7 @@ var allMyProjects = [
   },
   {
     title: 'Bus Mall',
+    category: 'survey',
     publishedOn: '2016-04-28',
     projectGhPages: 'https://tanyaweaver.github.io/bus-mall/',
     projectIcon: 'assets/busMall.png',
@@ -15,6 +17,7 @@ var allMyProjects = [
   },
   {
     title: 'Rock, Paper, Scissors',
+    category: 'games',
     publishedOn:'2016-05-05',
     projectGhPages: 'https://tanyaweaver.github.io/final-project',
     projectIcon: 'assets/RPS.png',

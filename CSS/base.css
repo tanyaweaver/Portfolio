@@ -7,10 +7,9 @@
 
 body {
   text-align: center;
-  /*width: 70%;*/
   margin: 0 auto;
   background-color: #BDBDBD;
-
+  font-size: 10px;
 }
 
 main {
@@ -20,11 +19,12 @@ main {
 
 .title{
   background-color: #8F2A1A;
-  padding-top: 100px;
+  padding-top: 50px;
 }
 
 .nav {
   background-color: #5D0B0A;
+  /*background-color:#424242;*/
 }
 
 ul {
@@ -41,23 +41,52 @@ img {
 h1 {
   padding: 10px;
   margin: 0;
-  font-size: 40px;
+  font-size: 1.9rem;
   font-weight: 600;
 }
 
 h2 {
   padding: 10px;
   margin: 0;
+  font-size: 1.6rem;
 }
 
+
+h3 {
+  font-size: 1.4rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+  margin: 10px;
+}
+
+time {
+  font-size: 0.9rem;
+}
+
+.social-media {
+  font-size: 0.9rem;
+}
 .nav a {
   color: white;
+  font-size: 1.1rem;
 }
 
 a:hover {
   color: #880E4F;
 }
 
-.social-media {
+@media (min-width: 640px) {
+  h1 {
+    padding: 10px;
+    margin: 0;
+    font-size: 2.1rem;
+    font-weight: 600;
+  }
 
-}
+  h2 {
+    padding: 10px;
+    margin: 0;
+    font-size: 1.8rem;
+  }
