@@ -42,8 +42,13 @@ projectView.handleMainNav = function() {
   //setting click on the HOME tab to set up the page
   $('.nav .tab:first').click();
 };
-$(document).ready(function() {
+
+//render projects to index.html
+projectView.initIndexPage = function() {
+  Project.all.forEach(function(a) {
+    $('#projects').append(p.toHtml($('#projects-display')));
+  });
   projectView.populateFilters();
   projectView.handleCategoryFilter();
   projectView.handleMainNav();
-});
+};
