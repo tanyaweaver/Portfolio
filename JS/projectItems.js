@@ -24,4 +24,3 @@ var allMyProjects = [
     projectSourceCode: 'https://github.com/tanyaweaver/final-project'
   }
 ];
-console.log(JSON.stringify(allMyProjects));

@@ -45,8 +45,8 @@ projectView.handleMainNav = function() {
 
 //render projects to index.html
 projectView.initIndexPage = function() {
-  Project.all.forEach(function(a) {
-    $('#projects').append(p.toHtml($('#projects-display')));
+  Project.all.forEach(function(p) {
+    $('#projects').append(p.toHtml($('#render-projects')));
   });
   projectView.populateFilters();
   projectView.handleCategoryFilter();

@@ -1,6 +1,6 @@
 function Project (opts){
-  for (kes in opts) {
-    this[key] = opts[keys];
+  for (keys in opts) {
+    this[keys] = opts[keys];
   }
 }
 
@@ -22,15 +22,17 @@ Project.loadAll = function (dataWePassIn) {
  //iterate through the collection of all my projects (projectItems.js)
  //and create new Project instances, push them into projects[]
   dataWePassIn.forEach (function(project) {
-    Projects.all.push(new Project (project));
+    Project.all.push(new Project (project));
   });
 };
 
 Project.fetchAll = function() {
   if(localStorage.allMyProjects) {
+    console.log('local Storage exists');
     Project.loadAll(JSON.parse(localStorage.allMyProjects));
     projectView.initIndexPage();
   }else{
+    console.log('no local storage');
     $.getJSON('../data/projectItems.json', function(data) {
       Project.loadAll(data);
       localStorage.allMyProjects = JSON.stringify(data);
