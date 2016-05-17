@@ -46,7 +46,7 @@ projectView.handleMainNav = function() {
 //render stats to index.html (admin tab)
 projectView.renderStats = function() {
   var template = Handlebars.compile($('#render-stats').html());
-  Project.ghPages().foreach(function(pages) {
+  Project.ghPages().forEach(function(pages) {
     $('#admin').append(template(pages));
   });
 };

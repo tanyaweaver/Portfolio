@@ -26,6 +26,15 @@ Project.loadAll = function (dataWePassIn) {
   });
 };
 
+Project.ghPages = function() {
+  return Project.all.map(function(project) {
+    return {
+      title: project.title,
+      projectGhPages: project.projectGhPages
+    };
+  });
+};
+
 Project.fetchAll = function() {
   if(localStorage.allMyProjects) {
     console.log('local Storage exists');
