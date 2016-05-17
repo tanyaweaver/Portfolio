@@ -28,6 +28,10 @@
         </footer>
       </section>
     </script>
+    /*--template for stats--*/
+    <script id="render-stats" type="text/x-handlebars-template">
+      <li>{{title}}: {{gh-pages}}</li>
+    </script>
 </head>
 <body>
   <header>
@@ -40,6 +44,7 @@
         <li><a class="tab" data-content="projects">Home</a></li>
         <li><a class="tab" data-content="resume">About</a></li>
         <li><a class="tab" data-content="contact-me">Contact Me</a></li>
+        <li><a class="tab" data-content="admin">Admin</a></li>
       </ul>
     </section>
   </header>
@@ -79,6 +84,7 @@
       <section id="projects" class="tab-content">
         <h3>My Projects</h3>
 
+
         <div id="filter">
           <select id="category-filter">
             <option val="">--Search for a project by category--</option>
@@ -86,28 +92,12 @@
         </div>
 
         <div class="projects-container">
-
-        <!-- <section class="template">
-          <header class="project-header">
-            <h3>Title</h3>
-            <time>Published Time</time>
-          </header>
-
-          <main class="project-body">
-            <a class="gh-pages" href="">
-              <div class='project-icons'><img src=""></div>
-              <p></p>
-            </a>
-          </main>
-
-          <footer>
-            <a class="source-code" href="">Source Code on GitHub.com</a>
-          </footer>
-        </div>
-        </section> -->
         </div>
       </section>
 
+      <section id="admin" class="tab-content">
+        <h3>Stats</h3>
+      </section>
       <!-- </div> -->
     </main>
 

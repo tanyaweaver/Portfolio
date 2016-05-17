@@ -43,6 +43,14 @@ projectView.handleMainNav = function() {
   $('.nav .tab:first').click();
 };
 
+//render stats to index.html (admin tab)
+projectView.renderStats = function() {
+  var template = Handlebars.compile($('#render-stats').html());
+  Project.ghPages().foreach(function(pages) {
+    $('#admin').append(template(pages));
+  });
+};
+
 //render projects to index.html
 projectView.initIndexPage = function() {
   Project.all.forEach(function(p) {
@@ -51,4 +59,5 @@ projectView.initIndexPage = function() {
   projectView.populateFilters();
   projectView.handleCategoryFilter();
   projectView.handleMainNav();
+  projectView.renderStats();
 };
