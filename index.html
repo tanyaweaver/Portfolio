@@ -28,11 +28,11 @@
     </script>
     <!--template for stats-->
     <script id="render-stats" type="text/x-handlebars-template">
-      <p>{{title}}: {{projectGhPages}}</p>
+      <p>{{title}}: <a href={{projectGhPages}}>{{projectGhPages}}</a></p>
     </script>
     <!-- template for unique categories that render on ADMIN tab -->
     <script id="render-unique-categories" type="text/x-handlebars-template">
-      <p>{{uniqueCategory}}</p>
+      <p>{{uniqueCategory}} ({{numberOfOccurances}})</p>
     </script>
 </head>
 <body>
@@ -102,7 +102,7 @@
          <h3>GitHub-pages for projects:</h3>
        </div>
        <div id="unique-categories">
-         <h3>Categories of projects:</h3>
+         <h3>Number of projects in each category:</h3>
        </div>
       </section>
 

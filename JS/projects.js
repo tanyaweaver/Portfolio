@@ -36,26 +36,32 @@
     });
   };
 
-  Project.listOfUniqueCategories =function() {
+  Project.listOfUniqueCategories = function() {
     return Project.all.reduce(function(uniqueCategories, project) {
-      if(uniqueCategories.indexOf(project.category) === -1) {
+      if (uniqueCategories.indexOf(project.category) === -1) {
         uniqueCategories.push(project.category);
       };
       return uniqueCategories;
     },[])
     .map(function(c) {
-      return{
-        uniqueCategory: c
+      return {
+        uniqueCategory: c,
+        numberOfOccurances: Project.all.reduce(function(allOccurances, project) {
+          if (project.category === c) {
+            allOccurances++;
+          }
+          return allOccurances;
+        }, 0)
       };
     });
   };
 
   Project.fetchAll = function() {
-    if(localStorage.allMyProjects) {
+    if (localStorage.allMyProjects) {
       console.log('local Storage exists');
       Project.loadAll(JSON.parse(localStorage.allMyProjects));
       projectView.initIndexPage();
-    }else{
+    } else {
       console.log('no local storage');
       $.getJSON('../data/projectItems.json', function(data) {
         Project.loadAll(data);
