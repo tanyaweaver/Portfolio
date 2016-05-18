@@ -8,29 +8,31 @@
     <link rel="stylesheet" href="CSS/base.css">
     <link rel="stylesheet" href="CSS/layout.css">
     <link rel="stylesheet" href="CSS/modules.css">
+    <!-- template for projects -->
     <script id="render-projects" type="text/x-handlebars-template">
       <section class="projects-display"  class="project-item" data-category={{category}}>
         <header class="project-header">
           <h4>{{title}}</h4>
-          <!-- <h4>Category: {{category}}</h4> -->
           <time>{{publishedDaysAgo}}</time>
         </header>
-
         <main class="project-body">
           <a class="gh-pages" href={{projectGhPages}}>
             <div class='project-icons'><img src={{projectIcon}}></div>
             <p></p>
           </a>
         </main>
-
         <footer>
           <a class="source-code" href={{projectSourceCode}}>Source Code on GitHub.com</a>
         </footer>
       </section>
     </script>
-    /*--template for stats--*/
+    <!--template for stats-->
     <script id="render-stats" type="text/x-handlebars-template">
-      <li>{{title}}: {{projectGhPages}}</li>
+      <p>{{title}}: {{projectGhPages}}</p>
+    </script>
+    <!-- template for unique categories that render on ADMIN tab -->
+    <script id="render-unique-categories" type="text/x-handlebars-template">
+      <p>{{uniqueCategory}}</p>
     </script>
 </head>
 <body>
@@ -96,8 +98,15 @@
       </section>
 
       <section id="admin" class="tab-content">
-        <h3>Stats</h3>
+        <div id="stats">
+         <h3>GitHub-pages for projects:</h3>
+       </div>
+       <div id="unique-categories">
+         <h3>Categories of projects:</h3>
+       </div>
       </section>
+
+
       <!-- </div> -->
     </main>
 

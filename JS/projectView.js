@@ -43,21 +43,31 @@ projectView.handleMainNav = function() {
   $('.nav .tab:first').click();
 };
 
-//render stats to index.html (admin tab)
-projectView.renderStats = function() {
-  var template = Handlebars.compile($('#render-stats').html());
-  Project.ghPages().forEach(function(pages) {
-    $('#admin').append(template(pages));
-  });
-};
-
-//render projects to index.html
-projectView.initIndexPage = function() {
+projectView.renderProjects = function() {
   Project.all.forEach(function(p) {
     $('#projects').append(p.toHtml($('#render-projects')));
   });
+};
+
+projectView.renderStats = function() {
+  var template = Handlebars.compile($('#render-stats').html());
+  Project.ghPages().forEach(function(pages) {
+    $('#stats').append(template(pages));
+  });
+};
+
+projectView.renderUniqueCategories = function() {
+  var template = Handlebars.compile($('#render-unique-categories').html());
+  Project.listOfUniqueCategories().forEach(function(categories) {
+    $('#unique-categories').append(template(categories));
+  });
+};
+
+projectView.initIndexPage = function() {
+  projectView.renderProjects();
   projectView.populateFilters();
   projectView.handleCategoryFilter();
   projectView.handleMainNav();
   projectView.renderStats();
+  projectView.renderUniqueCategories();
 };
