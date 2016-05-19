@@ -44,9 +44,15 @@
     $('.nav .tab:first').click();
   };
 
+  projectView.renderResume = function() {
+    Resume.all.forEach(function(section) {
+      $('#resume').append(section.toHtml($('#render-resume')));
+    });
+  };
+
   projectView.renderProjects = function() {
-    Project.all.forEach(function(p) {
-      $('#projects').append(p.toHtml($('#render-projects')));
+    Project.all.forEach(function(project) {
+      $('#projects').append(project.toHtml($('#render-projects')));
     });
   };
 
@@ -59,6 +65,10 @@
 
   projectView.renderUniqueCategories = function() {
     var template = Handlebars.compile($('#render-unique-categories').html());
+    //return Project.listOfUniqueCategories().map(function(category) {
+    //  $('#unique-categories').append(template(categories));
+    //})
+    //}
     Project.listOfUniqueCategories().forEach(function(categories) {
       $('#unique-categories').append(template(categories));
     });
@@ -72,5 +82,10 @@
     projectView.renderStats();
     projectView.renderUniqueCategories();
   };
+
+  projectView.initResumeTab = function() {
+    projectView.renderResume();
+  };
+
   module.projectView = projectView;
 })(window);

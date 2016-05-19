@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="CSS/base.css">
     <link rel="stylesheet" href="CSS/layout.css">
     <link rel="stylesheet" href="CSS/modules.css">
+    <!-- template for resume -->
+    <script id="render-resume" type="text/x-handlebars-template">
+      <h2>{{section}}</h2>
+      <p>{{body}}</p>
     <!-- template for projects -->
     <script id="render-projects" type="text/x-handlebars-template">
       <section class="projects-display"  class="project-item" data-category={{category}}>
@@ -55,7 +59,7 @@
 
       <section class="tab-content" id="resume" class="resume-container">
 
-        <div id="objective">
+        <!-- <div id="objective">
           <h2>Objective</h2>
           <p>placeholder</p>
         </div>
@@ -73,7 +77,7 @@
         <div id="skills">
           <h2>Skills</h2>
           <p>placeholder</p>
-        </div>
+        </div> -->
 
       </section>
 
@@ -125,9 +129,13 @@
     <script src="JS/projectItems.js"></script>
     <script src="JS/projects.js"></script>
     <script src="JS/projectView.js"></script>
+    <script src="JS/resume.js"></script>
     <script>
       Project.fetchAll();
     </script>
+    <script>
+      ResumeSection.fetchAll();
+      </script>
   </body>
 
 </html>
