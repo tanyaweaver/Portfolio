@@ -45,7 +45,7 @@
   };
 
   projectView.renderResume = function() {
-    Resume.all.forEach(function(section) {
+    ResumeSection.all.forEach(function(section) {
       $('#resume').append(section.toHtml($('#render-resume')));
     });
   };

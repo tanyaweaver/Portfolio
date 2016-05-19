@@ -8,12 +8,12 @@
   ResumeSection.all = [];
 
   ResumeSection.prototype.toHtml = function (scriptTemplateId){
-    var template = Handlebars.compile(scriptTemplateId).html();
+    var template = Handlebars.compile((scriptTemplateId).html());
     return template(this);
   };
 
   ResumeSection.loadAll = function(dataWePassIn) {
-    Resume.all = dataWePassIn.map(function(section) {
+    ResumeSection.all = dataWePassIn.map(function(section) {
       return new ResumeSection(section);
     });
   };
