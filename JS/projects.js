@@ -20,11 +20,8 @@
     dataWePassIn.sort(function(a,b) {
       return(new Date(b.publishedOn) - new Date(a.publishedOn));
     });
-   //iterate through the collection of all my projects (projectItems.js)
-   //and create new Project instances, push them into projects[]
-    // dataWePassIn.forEach (function(project) {
-    //   Project.all.push(new Project (project));});
-
+   //iterate through the collection of all my projects
+   //and create new Project instances, push them into Project.all[]
     Project.all = dataWePassIn.map(function(project) {
       return new Project(project);
     });
@@ -49,14 +46,12 @@
     .map(function(c) {
       return {
         uniqueCategory: c,
-        numberOfOccurances: Project.all.reduce(function(allOccurances, project) {
-          if (project.category === c) {
-            allOccurances++;
-          }
-          return allOccurances;
-        }, 0)
+        numberOfOccurances: Project.all.filter(function(project) {
+          return project.category === c;
+        }).length
       };
     });
+
   };
 
   Project.fetchAll = function() {
