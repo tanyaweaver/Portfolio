@@ -22,8 +22,11 @@
     });
    //iterate through the collection of all my projects (projectItems.js)
    //and create new Project instances, push them into projects[]
-    dataWePassIn.forEach (function(project) {
-      Project.all.push(new Project (project));
+    // dataWePassIn.forEach (function(project) {
+    //   Project.all.push(new Project (project));});
+
+    Project.all = dataWePassIn.map(function(project) {
+      return new Project(project);
     });
   };
 
