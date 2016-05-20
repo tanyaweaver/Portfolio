@@ -10,8 +10,10 @@
     <link rel="stylesheet" href="CSS/modules.css">
     <!-- template for resume -->
     <script id="render-resume" type="text/x-handlebars-template">
-      <h2>{{section}}</h2>
-      <p>{{body}}</p>
+      <div class="resume-item">
+        <h2>{{section}}</h2>
+        <p>{{body}}</p>
+      </div>
     </script>
     <!-- template for projects -->
     <script id="render-projects" type="text/x-handlebars-template">
@@ -58,28 +60,8 @@
 
     <main>
 
-      <section class="tab-content" id="resume" class="resume-container">
-
-        <!-- <div id="objective">
-          <h2>Objective</h2>
-          <p>placeholder</p>
-        </div>
-
-        <div id="work-history">
-          <h2>Work History</h2>
-          <p>placeholder</p>
-        </div>
-
-        <div id="education">
-          <h2>Education</h2>
-          <p>placeholder</p>
-        </div>
-
-        <div id="skills">
-          <h2>Skills</h2>
-          <p>placeholder</p>
-        </div> -->
-
+      <section id="resume" class="tab-content" class="resume-container">
+        <h2>About Me</h2>
       </section>
 
       <section id="contact-me" class="tab-content" class="contact-me-container">
@@ -90,7 +72,6 @@
 
       <section id="projects" class="tab-content">
         <h3>My Projects</h3>
-
 
         <div id="filter">
           <select id="category-filter">

@@ -47,8 +47,9 @@
     margin: 10px;
   }
 
-  /*.resume-container {
-    float: left;
+  .resume-item {
     width: 65%;
+    margin: 0 auto;
+    padding-top: 20px;
   }
-}*/
+}

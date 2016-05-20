@@ -65,10 +65,6 @@
 
   projectView.renderUniqueCategories = function() {
     var template = Handlebars.compile($('#render-unique-categories').html());
-    //return Project.listOfUniqueCategories().map(function(category) {
-    //  $('#unique-categories').append(template(categories));
-    //})
-    //}
     Project.listOfUniqueCategories().forEach(function(categories) {
       $('#unique-categories').append(template(categories));
     });
