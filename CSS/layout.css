@@ -1,6 +1,13 @@
 /******************HEADER******************/
-.title {
+
+.title{
   text-align: center;
+  justify-content: center;
+  padding-top: 50px;
+  /*background-color: #8F2A1A;*/
+  background-image: url("../assets/beachSmallScreen.jpeg");
+  background-size: cover;
+  height: 200px;
 }
 
 .social-media li{
@@ -32,6 +39,11 @@
 
 @media (min-width: 640px) {
 /******************HEADER******************/
+  .title{
+    background-image: url("../assets/beach.jpg");
+    background-size: cover;
+    height: 350px;
+  }
   .nav li {
     margin: 10px;
     display:inline-block;
