@@ -1,6 +1,7 @@
 * {
   color: #05071F;
   /*font-family: 'PT Serif', serif;*/
+
   font-family: 'Montserrat', sans-serif;
 
 }
@@ -8,18 +9,14 @@
 body {
   text-align: center;
   margin: 0 auto;
-  background-color: #BDBDBD;
+  /*background-color: #BDBDBD;*/
+  background-color: #EFEBE9;
   font-size: 10px;
 }
 
 main {
   width: 90%;
   margin: 0 auto;
-}
-
-.title{
-  background-color: #8F2A1A;
-  padding-top: 50px;
 }
 
 .nav {
@@ -36,13 +33,6 @@ ul {
 img {
   max-width: 100%;
   height: auto;
-}
-
-h1 {
-  padding: 10px;
-  margin: 0;
-  font-size: 1.9rem;
-  font-weight: 600;
 }
 
 h2 {
