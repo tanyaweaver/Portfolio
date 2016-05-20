@@ -56,18 +56,18 @@
   Project.fetchAll = function() {
     $.ajax({
       method: 'HEAD',
-      url: '../data/ProjectItems.json',
+      url: '../data/projectItems.json',
       success: function(data, message, xhr) {
-        var eTag = xhr.getResponseHeader('eTag');
-        if(!localStorage.eTag || eTag !== localStorage.eTag) {
-          console.log('eTag is not in local storage or different from local storage');
-          localStorage.eTag = eTag;
-          $.getJSON ('../data/ProjectItems.json', function(data) {
+        var eTagProject = xhr.getResponseHeader('eTag');
+        if(!localStorage.eTagProject || eTagProject !== localStorage.eTagProject) {
+          console.log('eTagProject is not in local storage or different from local storage, getting data for allMyProjects from .json and saving it to local storage');
+          localStorage.eTagProject = eTagProject;
+          $.getJSON ('../data/projectItems.json', function(data) {
             Project.loadAll(data);
             localStorage.allMyProjects = JSON.stringify(data);
-          });  
+          });
         } else {
-          console.log('eTag is the same as in local storage');
+          console.log('eTagProject is the same as in local storage, getting allMyProjects from local Storage');
           Project.loadAll(JSON.parse(localStorage.allMyProjects));
         }
         projectView.initIndexPage();
