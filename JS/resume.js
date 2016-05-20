@@ -20,13 +20,16 @@
 
   ResumeSection.fetchAll = function() {
     $.ajax({
+      method: 'HEAD',
       url: '../data/resumeItems.json',
       success: function(data, message, xhr) {
         var eTag = xhr.getResponseHeader('eTag');
         if(!localStorage.eTag || eTag !== localStorage.eTag) {
           localStorage.eTag = eTag;
-          ResumeSection.loadAll(data);
-          localStorage.MyResumeSections = JSON.stringify(data);
+          $.getJSON('../data/resumeItems.json', function(data) {
+            ResumeSection.loadAll(data);
+            localStorage.MyResumeSections = JSON.stringify(data);
+          });
         } else {
           ResumeSection.loadAll(JSON.parse(localStorage.MyResumeSections));
         }
