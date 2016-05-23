@@ -30,12 +30,14 @@
           $.getJSON('../data/resumeItems.json', function(data) {
             ResumeSection.loadAll(data);
             localStorage.MyResumeSections = JSON.stringify(data);
+            projectView.initResumeTab();
+
           });
         } else {
           console.log('eTagResume is the same as in local storage, getting resumeSections from local storage');
           ResumeSection.loadAll(JSON.parse(localStorage.MyResumeSections));
+          projectView.initResumeTab();
         }
-        projectView.initResumeTab();
       }
     });
   };

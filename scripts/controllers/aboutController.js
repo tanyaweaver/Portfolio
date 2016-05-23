@@ -2,7 +2,7 @@
   var aboutController = {};
   aboutController.index = function() {
     if($('#resume section').length === 0) {
-      ResumeSection.fetchAll();
+      ResumeSection.fetchAll(projectView.initResumeTab);
     }
     $('#home-page').hide();
     $('#resume').show();

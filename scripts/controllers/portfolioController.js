@@ -1,8 +1,8 @@
 (function(module) {
-  var portfolioController ={};
+  var portfolioController = {};
   portfolioController.index = function() {
-    if($('#project section').length === 0) {
-      Project.fetchAll();
+    if($('#projects section').length === 0) {
+      Project.fetchAll(projectView.initIndexPage);
     }
     $('#home-page').hide();
     $('#resume').hide();
