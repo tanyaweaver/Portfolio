@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="CSS/modules.css">
     <!-- template for resume -->
     <script id="render-resume" type="text/x-handlebars-template">
-      <div class="resume-item">
+      <section class="resume-item">
         <h2>{{section}}</h2>
         <p>{{body}}</p>
-      </div>
+      </section>
     </script>
     <!-- template for projects -->
     <script id="render-projects" type="text/x-handlebars-template">
@@ -122,10 +122,7 @@
     <script src="scripts/controllers/portoflioController.js"></script>
     <script src="vendor/scripts/page.js"></script>
     <script src="scripts/controllers/routes.js"></script>
-    <script>
       
-      ResumeSection.fetchAll();
-      </script>
   </body>
 
 </html>
