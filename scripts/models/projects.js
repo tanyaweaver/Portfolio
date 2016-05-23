@@ -10,17 +10,13 @@
   Project.prototype.toHtml = function(scriptTemplateId) {
     this.publishedDaysAgo = 'about ' + parseInt((new Date() - new Date (this.publishedOn))/60/60/24/1000) + ' days ago';
     var template = Handlebars.compile((scriptTemplateId).html());
-    // this.classList.add('projects-display');
     return template(this);
   };
 
-  //sort projects by date published, newest first
   Project.loadAll = function (dataWePassIn) {
     dataWePassIn.sort(function(a,b) {
       return(new Date(b.publishedOn) - new Date(a.publishedOn));
     });
-   //iterate through the collection of all my projects
-   //and create new Project instances, push them into Project.all[]
     Project.all = dataWePassIn.map(function(project) {
       return new Project(project);
     });
@@ -52,7 +48,7 @@
     });
   };
 
-  Project.fetchAll = function() {
+  Project.fetchAll = function(next) {
     $.ajax({
       method: 'HEAD',
       url: '../data/projectItems.json',
@@ -64,12 +60,12 @@
           $.getJSON ('../data/projectItems.json', function(data) {
             Project.loadAll(data);
             localStorage.allMyProjects = JSON.stringify(data);
-            projectView.initIndexPage();
+            next();
           });
         } else {
           console.log('eTagProject is the same as in local storage, getting allMyProjects from local Storage');
           Project.loadAll(JSON.parse(localStorage.allMyProjects));
-          projectView.initIndexPage();
+          next();
         }
       }
     });

@@ -52,6 +52,9 @@
     projectView.renderProjects();
     projectView.populateFilters();
     projectView.handleCategoryFilter();
+  };
+
+  projectView.initAdminPage = function() {
     projectView.renderStats();
     projectView.renderUniqueCategories();
   };
