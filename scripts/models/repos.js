@@ -3,7 +3,7 @@
   repos.all = [];
   repos.requestRepos = function(callback) {
     $.ajax({
-      url: 'http://api.github.com/users/tanyaweaver/repos?sort=updated',
+      url: 'https://api.github.com/users/tanyaweaver/repos',
       type: 'GET',
       headers: {'Authorization': 'token ' + githubToken},
       success: function(data, message, xhr) {
