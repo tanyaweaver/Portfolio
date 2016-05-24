@@ -4,11 +4,8 @@
     if($('#projects section').length === 0) {
       Project.fetchAll(projectView.initIndexPage);
     }
-    $('#home-page').hide();
-    $('#resume').hide();
-    $('#projects').show();
-    $('#admin').hide();
-    $('#contact-me').hide();
+    $('#projects').show().siblings().hide();
+    // repos.requestRepos(repoView.index);
   };
   module.portfolioController = portfolioController;
 })(window);

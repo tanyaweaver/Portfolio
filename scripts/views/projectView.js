@@ -30,7 +30,7 @@
 
   projectView.renderProjects = function() {
     Project.all.forEach(function(project) {
-      $('#projects').append(project.toHtml($('#render-projects')));
+      $('#projects .projects-container').append(project.toHtml($('#render-projects')));
     });
   };
 
@@ -49,9 +49,9 @@
   };
 
   projectView.initIndexPage = function() {
-    projectView.renderProjects();
     projectView.populateFilters();
     projectView.handleCategoryFilter();
+    projectView.renderProjects();
   };
 
   projectView.initAdminPage = function() {
