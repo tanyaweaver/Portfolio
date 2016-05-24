@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="CSS/modules.css">
     <!-- template for resume -->
     <script id="render-resume" type="text/x-handlebars-template">
-      <div class="resume-item">
+      <section class="resume-item">
         <h2>{{section}}</h2>
         <p>{{body}}</p>
-      </div>
+      </section>
     </script>
     <!-- template for projects -->
     <script id="render-projects" type="text/x-handlebars-template">
@@ -47,11 +47,11 @@
 
     <section class="nav">
       <ul>
-        <li><a class="tab" data-content="home-page">Home</a></li>
-        <li><a class="tab" data-content="projects">Portfolio</a></li>
-        <li><a class="tab" data-content="resume">About</a></li>
-        <li><a class="tab" data-content="contact-me">Contact Me</a></li>
-        <li><a class="tab" data-content="admin">Admin</a></li>
+        <li class="tab" data-content="home-page"><a href="./">Home</a></li>
+        <li class="tab" data-content="projects"><a href="./portfolio">Portfolio</a></li>
+        <li class="tab" data-content="resume"><a href="./about">About</a></li>
+        <li class="tab" data-content="contact-me"><a href="./contact">Contact Me</a></li>
+        <li class="tab" data-content="admin"><a href="./admin">Admin</a></li>
       </ul>
     </section>
     <section id="home-page" class="tab-content" class="home-page-container">
@@ -88,16 +88,14 @@
       </section>
 
       <section id="admin" class="tab-content">
-        <div id="stats">
+        <section id="stats">
          <h3>GitHub-pages for projects:</h3>
-       </div>
-       <div id="unique-categories">
+       </section>
+       <section id="unique-categories">
          <h3>Number of projects in each category:</h3>
-       </div>
+       </section>
       </section>
 
-
-      <!-- </div> -->
     </main>
 
     <footer>
@@ -110,16 +108,19 @@
       </div>
       <p>&copy 2016 Tatiana Weaver
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
-    <script src="JS/projectItems.js"></script>
-    <script src="JS/projects.js"></script>
-    <script src="JS/projectView.js"></script>
-    <script src="JS/resume.js"></script>
-    <script>
-      Project.fetchAll();
-      ResumeSection.fetchAll();
-      </script>
+    <script src="vendor/scripts/handlebars.js"></script>
+    <script src="vendor/scripts/jquery-2.1.4.js"></script>
+    <script src="scripts/models/projects.js"></script>
+    <script src="scripts/models/resume.js"></script>
+    <script src="scripts/views/projectView.js"></script>
+    <script src="scripts/controllers/aboutController.js"></script>
+    <script src="scripts/controllers/adminController.js"></script>
+    <script src="scripts/controllers/contactController.js"></script>
+    <script src="scripts/controllers/homeController.js"></script>
+    <script src="scripts/controllers/portfolioController.js"></script>
+    <script src="vendor/scripts/page.js"></script>
+    <script src="scripts/controllers/routes.js"></script>
+
   </body>
 
 </html>
