@@ -21,14 +21,19 @@ main {
 
 .nav {
   background-color: #5D0B0A;
-  /*background-color:#424242;*/
 }
 
-ul {
+.nav ul {
   margin: 0;
   padding: 0px;
   list-style-type: none;
 }
+
+#all-repos ul {
+  margin: 0;
+  padding: 0px;
+}
+
 
 img {
   max-width: 100%;

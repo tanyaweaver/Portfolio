@@ -1,10 +1,10 @@
 (function(module) {
-  var aboutController = {};
-  aboutController.index = function() {
+  var resumeController = {};
+  resumeController.index = function() {
     if($('#resume section').length === 0) {
       ResumeSection.fetchAll();
     }
     $('#resume').show().siblings().hide();
   };
-  module.aboutController = aboutController;
+  module.resumeController = resumeController;
 })(window);

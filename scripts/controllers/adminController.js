@@ -2,13 +2,10 @@
   var adminController = {};
   adminController.index = function() {
     if($('#admin section p').length === 0) {
-      Project.fetchAll(projectView.initAdminPage);
+      Project.fetchAll(adminView.initAdminPage);
+      repos.requestRepos(adminView.renderRepos);
     }
-    $('#home-page').hide();
-    $('#resume').hide();
-    $('#projects').hide();
-    $('#admin').show();
-    $('#contact-me').hide();
+    $('#admin').show().siblings().hide();
   };
   module.adminController = adminController;
 })(window);

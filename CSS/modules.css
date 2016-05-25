@@ -16,7 +16,16 @@
   margin: 10px;
 }
 
+
 .project-icons {
   width: 100%;
   margin: 0 auto;
+}
+
+#admin h3 {
+  margin-top: 0;
+}
+
+#admin h2 {
+  text-decoration: underline;
 }
