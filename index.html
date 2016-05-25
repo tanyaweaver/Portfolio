@@ -2,13 +2,11 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link href='https://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'> -->
-    <!-- <link rel="stylesheet" href="CSS/icons.css"> -->
     <link href='https://fonts.googleapis.com/css?family=PT+Serif|Montserrat' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="CSS/base.css">
     <link rel="stylesheet" href="CSS/layout.css">
     <link rel="stylesheet" href="CSS/modules.css">
-    <!-- template for resume -->
+
     <script id="render-resume" type="text/x-handlebars-template">
       <section class="resume-item">
         <h2>{{section}}</h2>
@@ -34,7 +32,7 @@
       </section>
     </script>
 
-    <script id="render-stats" type="text/x-handlebars-template">
+    <script id="render-gh-pages" type="text/x-handlebars-template">
       <p>{{title}}: <a href={{projectGhPages}}>{{projectGhPages}}</a></p>
     </script>
 
@@ -67,22 +65,22 @@
   </header>
 
     <main>
-      <section id="home-page" class="tab-content" class="home-page-container">
+      <section id="home-page" class="home-page-container">
         <div class="title">
           <h1>TATIANA WEAVER | software developer</h1>
         </div>
       </section>
 
-      <section id="resume" class="tab-content" class="resume-container">
+      <section id="resume" class="resume-container">
       </section>
 
-      <section id="contact-me" class="tab-content" class="contact-me-container">
+      <section id="contact-me" class="contact-me-container">
         <h2>Contact Me</h2>
         <h3>Phone</h3>
         <h3>Email</h3>
       </section>
 
-      <section id="projects" class="tab-content">
+      <section id="projects">
         <h3>My Projects</h3>
 
         <div id="filter">
@@ -91,22 +89,18 @@
           </select>
         </div>
 
-        <!-- <div class="projects-container">
-        </div> -->
-
       </section>
 
-      <section id="admin" class="tab-content">
-        <section id="stats">
+      <section id="admin">
+        <section id="github-pages">
          <h2>Information about Portfolio page</h2>
-         <h3>GitHub-pages for displayed projects:</h3>
+         <h4>GitHub-pages for displayed projects:</h4>
        </section>
        <section id="unique-categories">
-         <h3>Number of projects in each category:</h3>
+         <h4>Number of projects in each category:</h4>
        </section>
        <section id="all-repos">
          <h2>Information about GitHub repos</h2>
-         <h3>All GitHub Repositories (excluding forks from other users):</h3>
        </div>
       </section>
 
