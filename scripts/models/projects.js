@@ -55,7 +55,6 @@
       success: function(data, message, xhr) {
         var eTagProject = xhr.getResponseHeader('eTag');
         if(!localStorage.eTagProject || eTagProject !== localStorage.eTagProject) {
-          console.log('eTagProject is not in local storage or different from local storage, getting data for allMyProjects from .json and saving it to local storage');
           localStorage.eTagProject = eTagProject;
           $.getJSON ('/data/projectItems.json', function(data) {
             Project.loadAll(data);
@@ -63,7 +62,6 @@
             next();
           });
         } else {
-          console.log('eTagProject is the same as in local storage, getting allMyProjects from local Storage');
           Project.loadAll(JSON.parse(localStorage.allMyProjects));
           next();
         }

@@ -1,10 +1,10 @@
 (function(module) {
   var adminView = {};
 
-  adminView.renderStats = function() {
+  adminView.renderGithubPagesInfo = function() {
     var template = Handlebars.compile($('#render-gh-pages').html());
     Project.ghPages().forEach(function(pages) {
-      $('#stats').append(template(pages));
+      $('#github-pages').append(template(pages));
     });
   };
 
@@ -23,7 +23,7 @@
   };
 
   adminView.initAdminPage = function() {
-    adminView.renderStats();
+    adminView.renderGithubPagesInfo();
     adminView.renderUniqueCategories();
     repos.requestRepos(adminView.renderRepos);
   };

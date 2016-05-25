@@ -3,7 +3,6 @@
 .title{
   text-align: center;
   justify-content: center;
-  /*background-color: #8F2A1A;*/
   background-image: url("../assets/home1.jpg");
   background-size: cover;
   height: 250px;
@@ -51,9 +50,11 @@ h1 {
     height: 400px;
     text-align: center;
   }
+
   h1 {
     font-size: 1.9rem;
   }
+  
   .nav li {
     margin: 10px;
     display:inline-block;

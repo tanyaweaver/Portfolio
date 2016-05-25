@@ -29,12 +29,6 @@ main {
   list-style-type: none;
 }
 
-#all-repos ul {
-  margin: 0;
-  padding: 0px;
-}
-
-
 img {
   max-width: 100%;
   height: auto;
@@ -45,7 +39,6 @@ h2 {
   margin: 0;
   font-size: 1.6rem;
 }
-
 
 h3 {
   font-size: 1.4rem;
