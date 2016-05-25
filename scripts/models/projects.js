@@ -51,13 +51,13 @@
   Project.fetchAll = function(next) {
     $.ajax({
       method: 'HEAD',
-      url: '../data/projectItems.json',
+      url: '/data/projectItems.json',
       success: function(data, message, xhr) {
         var eTagProject = xhr.getResponseHeader('eTag');
         if(!localStorage.eTagProject || eTagProject !== localStorage.eTagProject) {
           console.log('eTagProject is not in local storage or different from local storage, getting data for allMyProjects from .json and saving it to local storage');
           localStorage.eTagProject = eTagProject;
-          $.getJSON ('../data/projectItems.json', function(data) {
+          $.getJSON ('/data/projectItems.json', function(data) {
             Project.loadAll(data);
             localStorage.allMyProjects = JSON.stringify(data);
             next();

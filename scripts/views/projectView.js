@@ -22,45 +22,16 @@
     });
   };
 
-  projectView.renderResume = function() {
-    ResumeSection.all.forEach(function(section) {
-      $('#resume').append(section.toHtml($('#render-resume')));
-    });
-  };
-
   projectView.renderProjects = function() {
     Project.all.forEach(function(project) {
-      $('#projects .projects-container').append(project.toHtml($('#render-projects')));
-    });
-  };
-
-  projectView.renderStats = function() {
-    var template = Handlebars.compile($('#render-stats').html());
-    Project.ghPages().forEach(function(pages) {
-      $('#stats').append(template(pages));
-    });
-  };
-
-  projectView.renderUniqueCategories = function() {
-    var template = Handlebars.compile($('#render-unique-categories').html());
-    Project.listOfUniqueCategories().forEach(function(categories) {
-      $('#unique-categories').append(template(categories));
+      $('#projects').append(project.toHtml($('#render-projects')));
     });
   };
 
   projectView.initIndexPage = function() {
+    projectView.renderProjects();
     projectView.populateFilters();
     projectView.handleCategoryFilter();
-    projectView.renderProjects();
-  };
-
-  projectView.initAdminPage = function() {
-    projectView.renderStats();
-    projectView.renderUniqueCategories();
-  };
-
-  projectView.initResumeTab = function() {
-    projectView.renderResume();
   };
 
   module.projectView = projectView;

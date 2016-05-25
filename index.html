@@ -15,7 +15,7 @@
         <p>{{body}}</p>
       </section>
     </script>
-    <!-- template for projects -->
+
     <script id="render-projects" type="text/x-handlebars-template">
       <section class="projects-display"  class="project-item" data-category={{category}}>
         <header class="project-header">
@@ -43,11 +43,12 @@
     </script>
 
     <script id="repo-template" type="text/x-handlebars-template">
-      <h4>{{name}}</h4>
+      <h4><a href="{{html_url}}">{{name}}</a></h4>
       <p>Description: {{description}}</p>
       <p>Language: {{language}}</p>
-      <p>Created on: {{created_at}}</p>
-      <p>Last update on: {{pushed_at}}</p>
+      <p>Created on {{created_at}}</p>
+      <p>Last update on {{pushed_at}}</p>
+
     </script>
 </head>
 <body>
@@ -57,7 +58,7 @@
       <ul>
         <li class="tab" data-content="home-page"><a href="./">Home</a></li>
         <li class="tab" data-content="projects"><a href="./portfolio">Portfolio</a></li>
-        <li class="tab" data-content="resume"><a href="./about">About</a></li>
+        <li class="tab" data-content="resume"><a href="./about">Resume</a></li>
         <li class="tab" data-content="contact-me"><a href="./contact">Contact Me</a></li>
         <li class="tab" data-content="admin"><a href="./admin">Admin</a></li>
       </ul>
@@ -73,7 +74,6 @@
       </section>
 
       <section id="resume" class="tab-content" class="resume-container">
-        <h2>About Me</h2>
       </section>
 
       <section id="contact-me" class="tab-content" class="contact-me-container">
@@ -91,20 +91,22 @@
           </select>
         </div>
 
-        <div class="projects-container">
-        </div>
+        <!-- <div class="projects-container">
+        </div> -->
 
       </section>
 
       <section id="admin" class="tab-content">
         <section id="stats">
-         <h3>GitHub-pages for projects:</h3>
+         <h2>Information about Portfolio page</h2>
+         <h3>GitHub-pages for displayed projects:</h3>
        </section>
        <section id="unique-categories">
          <h3>Number of projects in each category:</h3>
        </section>
        <section id="all-repos">
-         <h3>All GitHub Repositories</h3>
+         <h2>Information about GitHub repos</h2>
+         <h3>All GitHub Repositories (excluding forks from other users):</h3>
        </div>
       </section>
 
@@ -129,7 +131,7 @@
     <script src="scripts/views/projectView.js"></script>
     <script src="scripts/views/resumeView.js"></script>
     <script src="scripts/views/adminView.js"></script>
-    <script src="scripts/controllers/aboutController.js"></script>
+    <script src="scripts/controllers/resumeController.js"></script>
     <script src="scripts/controllers/adminController.js"></script>
     <script src="scripts/controllers/contactController.js"></script>
     <script src="scripts/controllers/homeController.js"></script>
