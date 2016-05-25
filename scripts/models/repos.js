@@ -2,15 +2,9 @@
   var repos = {};
   repos.all = [];
   repos.requestRepos = function(callback) {
-    $.ajax({
-      url: 'https://api.github.com/users/tanyaweaver/repos?sort=updated',
-      type: 'GET',
-      headers: {'Authorization': 'token ' + githubToken},
-      success: function(data, message, xhr) {
-        repos.all = data;
-        callback();
-      }
-    });
+    $.get('/github/users/tanyaweaver/repos?sort=updated').done(function(data) {
+      repos.all = data;
+    }).done(callback);
   };
   module.repos = repos;
 })(window);
