@@ -25,7 +25,6 @@
       success: function(data, message, xhr) {
         var eTagResume = xhr.getResponseHeader('eTag');
         if(!localStorage.eTagResume || eTagResume !== localStorage.eTagResume) {
-          console.log('eTagResume is not in local storage or different from local storage, getting data for resumeSections from .json and saving it to local storage');
           localStorage.eTagResume = eTagResume;
           $.getJSON('/data/resumeItems.json', function(data) {
             ResumeSection.loadAll(data);
@@ -34,7 +33,6 @@
 
           });
         } else {
-          console.log('eTagResume is the same as in local storage, getting resumeSections from local storage');
           ResumeSection.loadAll(JSON.parse(localStorage.MyResumeSections));
           resumeView.renderResume();
         }
